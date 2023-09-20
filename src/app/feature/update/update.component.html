@@ -1,1 +1,28 @@
-<p>update works!</p>
+<div class="flex justify-center items-center h-[80vh]">
+<table class="table w-[300px] text-center">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Qty</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <button mat-fab color="primary" (click)="onDecreaseQty()" aria-label="Example icon button with a delete icon">
+            <mat-icon>remove</mat-icon>
+          </button>
+      </td>
+      <td>
+        {{ qty() }}
+      </td>
+      <td>
+        <button mat-fab color="primary" (click)="onIncreaseQty()" aria-label="Example icon button with a delete icon">
+            <mat-icon>add</mat-icon>
+          </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

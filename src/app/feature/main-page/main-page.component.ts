@@ -10,19 +10,19 @@ export class MainPageComponent {
   showFiller = false;
   items = [
     {
-      name: 'Change Detection',
-      selected: true,
-      path: 'change-detection'
-    },
-    {
       name: 'Set Function',
-      selected: false,
+      selected: true,
       path: 'set'
     },
     {
       name: 'Update Function',
       selected: false,
       path: 'update'
+    },
+    {
+      name: 'Cart',
+      selected: false,
+      path: 'cart'
     },
     {
       name: 'Mutate Function',
