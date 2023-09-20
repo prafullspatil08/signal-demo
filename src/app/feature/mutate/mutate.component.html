@@ -1,1 +1,57 @@
-<p>mutate works!</p>
+<table class="table w-full m-4">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Position</th>
+      <th scope="col">Department</th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    <tr *ngFor="let employee of employees(); index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.position }}</td>
+      <td>{{ employee.department }}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="text-center">
+  <button
+    type="button"
+    mat-fab
+    extended
+    color="primary"
+    class="mt-4"
+    *ngIf="!empAdding()"
+    (click)="toggleAddBlock()"
+  >
+    + Add Employee
+  </button>
+</div>
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+  <div class="grid grid-cols-2 mt-4" *ngIf="empAdding()">
+    <div class="col-span-1">
+      <mat-form-field class="w-full p-2">
+        <mat-label>Enter Name</mat-label>
+        <input type="text" matInput formControlName="name" />
+      </mat-form-field>
+    </div>
+    <div class="col-span-1">
+      <mat-form-field class="w-full p-2">
+        <mat-label>Enter Position</mat-label>
+        <input type="text" matInput formControlName="position" />
+      </mat-form-field>
+    </div>
+    <div class="col-span-1">
+      <mat-form-field class="w-full p-2">
+        <mat-label>Enter Department</mat-label>
+        <input type="text" matInput formControlName="department" />
+      </mat-form-field>
+    </div>
+    <div class="col-span-1">
+      <button mat-fab type="submit" class="m-2" [disabled]="employeeForm.invalid" extended color="primary">Add Employee</button>
+      <button mat-fab class="m-2" type="reset"  (click)="toggleAddBlock()" extended color="primary">Cancel</button>
+    </div>
+  </div>
+</form>

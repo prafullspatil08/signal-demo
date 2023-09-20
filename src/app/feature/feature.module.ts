@@ -11,6 +11,7 @@ import { SetComponent } from './set/set.component';
 import { UpdateComponent } from './update/update.component';
 import { MutateComponent } from './mutate/mutate.component';
 import { EffectComponent } from './effect/effect.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { EffectComponent } from './effect/effect.component';
   imports: [
     CommonModule,
     FeatureRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class FeatureModule { }
