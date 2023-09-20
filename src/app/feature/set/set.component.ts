@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-set',
@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./set.component.scss']
 })
 export class SetComponent {
+  qty = signal<number>(0);
 
+  onDecreaseQty(){
+    this.qty.update(qty => {
+       return qty-1});
+  }
+
+  onIncreaseQty(){
+    
+    let i = this.qty.update(qty =>{return qty+1});
+    console.log('i: ', i)
+  }
 }
