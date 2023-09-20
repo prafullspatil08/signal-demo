@@ -5,6 +5,7 @@ import { PropertyComponent } from './property/property.component';
 import { UpdateComponent } from './update/update.component';
 import { MutateComponent } from './mutate/mutate.component';
 import { EffectComponent } from './effect/effect.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
       {
         path: 'effect',
         component: EffectComponent,
+      },
+      {
+        path: 'cart',
+        component: CartComponent,
       },
     ],
   },
