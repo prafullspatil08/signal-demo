@@ -1,0 +1,47 @@
+<label class="block font-bold text-xl text-center pb-4">Normal Property</label>
+<div class="w-full mb-5">
+  <table class="table-fixed w-full">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Full Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="text-center">
+        <td>{{ firstName }}</td>
+        <td>{{ lastName }}</td>
+        <td>{{ fullName }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<mat-form-field class="m-2">
+  <mat-label>First Name</mat-label>
+  <input [value]="firstName" #fname matInput type="text" />
+</mat-form-field>
+<mat-form-field class="m-2">
+  <mat-label>Last Name</mat-label>
+  <input [value]="lastName" #lname matInput type="text" />
+</mat-form-field>
+<div class="flex justify-around">
+  <button
+    (click)="changeFirstName(fname.value)"
+    mat-fab
+    extended
+    color="primary"
+  >
+    <!-- <mat-icon>favorite</mat-icon> -->
+    Change First Name
+  </button>
+  <button
+    (click)="changeLastName(lname.value)"
+    mat-fab
+    extended
+    color="primary"
+  >
+    <!-- <mat-icon>favorite</mat-icon> -->
+    Change Last Name
+  </button>
+</div>
