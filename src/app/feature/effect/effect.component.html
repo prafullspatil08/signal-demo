@@ -1,1 +1,25 @@
-<p>effect works!</p>
+<table class="table w-full mt-5">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Category</th>
+        <th scope="col">Price</th>
+        <th scope="col">Rating</th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr>
+        <td>{{ product().name }}</td>
+        <td>{{ product().category }}</td>
+        <td>{{ product().price }}</td>
+        <td>{{ product().rating }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-center mt-5">
+  <button mat-fab extended color="primary"
+    (click)="changeProductName()">
+    Change name to Mobile
+  </button>
+</div>
+ 
