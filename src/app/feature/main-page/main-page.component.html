@@ -14,9 +14,9 @@
       </div>
       <mat-list>
         <mat-selection-list #shoes>
-          <mat-list-option [class.active-list-item]="shoe?.selected" *ngFor="let shoe of folders">
+          <mat-list-option [routerLink]="item.path" [class.active-list-item]="item?.selected" *ngFor="let item of items">
             <mat-icon matListItemIcon>folder</mat-icon>
-            {{ shoe.name }}
+            {{ item.name }}
           </mat-list-option>
         </mat-selection-list>
       </mat-list>

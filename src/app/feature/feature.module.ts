@@ -7,6 +7,10 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { PropertyComponent } from './property/property.component';
 import { NormalPropertyComponent } from './normal-property/normal-property.component';
 import { ReactivePropertyComponent } from './reactive-property/reactive-property.component';
+import { SetComponent } from './set/set.component';
+import { UpdateComponent } from './update/update.component';
+import { MutateComponent } from './mutate/mutate.component';
+import { EffectComponent } from './effect/effect.component';
 
 
 @NgModule({
@@ -15,6 +19,10 @@ import { ReactivePropertyComponent } from './reactive-property/reactive-property
     PropertyComponent,
     NormalPropertyComponent,
     ReactivePropertyComponent,
+    SetComponent,
+    UpdateComponent,
+    MutateComponent,
+    EffectComponent,
   ],
   imports: [
     CommonModule,
