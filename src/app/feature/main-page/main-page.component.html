@@ -10,16 +10,28 @@
     <div>
       <div class="profile-header">
         <!-- <span class="material-icons" style="color: red">traffic</span> -->
-        <span>Angular Signals</span> 
+        <span>Angular Signals</span>
       </div>
       <mat-list>
         <mat-selection-list #shoes>
-          <mat-list-option [routerLink]="item.path" [class.active-list-item]="item?.selected" *ngFor="let item of items">
+          <mat-list-option
+            [routerLink]="item.path"
+            [class.active-list-item]="item?.selected"
+            *ngFor="let item of items"
+          >
             <mat-icon matListItemIcon>folder</mat-icon>
             {{ item.name }}
           </mat-list-option>
         </mat-selection-list>
       </mat-list>
+      <div class="profile-header">
+        <ng-container *ngIf="!isLoggedIn">
+          <button (click)="loggedIn()" mat-fab extended color="primary">Log In</button>
+        </ng-container>
+        <ng-container *ngIf="isLoggedIn">
+          <button (click)="loggedOut()" mat-fab extended color="primary">Sign Out</button>
+        </ng-container>
+      </div>
     </div>
   </mat-drawer>
   <mat-toolbar>
@@ -34,6 +46,6 @@
     <span>Angular Signals</span>
   </mat-toolbar>
   <div>
-  <router-outlet></router-outlet>
-</div>
+    <router-outlet></router-outlet>
+  </div>
 </mat-drawer-container>

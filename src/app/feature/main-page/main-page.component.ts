@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, effect } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartService } from 'src/app/service/cart.service';
 
 @Component({
   selector: 'app-main-page',
@@ -36,10 +37,24 @@ export class MainPageComponent {
     },
   ];
 
-  constructor(private router: Router){}
+  isLoggedIn!:boolean;
+
+  effect = effect(() => this.updateLoggedInVal(this.cart.isLoggedIn()) )
+  constructor(private router: Router, private cart: CartService){}
 
   routeMe(obj:any){
     this.router.navigateByUrl(obj.path)
     console.log(obj);
+  }
+
+  updateLoggedInVal(value:boolean){
+    this.isLoggedIn = value
+  }
+
+  loggedIn(){
+    this.cart.isLoggedIn.set(true);
+  }
+  loggedOut(){
+    this.cart.isLoggedIn.set(false);
   }
 }
