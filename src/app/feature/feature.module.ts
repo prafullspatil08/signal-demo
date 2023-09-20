@@ -11,6 +11,7 @@ import { UpdateComponent } from './update/update.component';
 import { MutateComponent } from './mutate/mutate.component';
 import { EffectComponent } from './effect/effect.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     UpdateComponent,
     MutateComponent,
     EffectComponent,
+    CartComponent,
   ],
   imports: [
     CommonModule,
