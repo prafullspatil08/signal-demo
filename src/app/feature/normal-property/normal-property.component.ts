@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./normal-property.component.scss']
 })
 export class NormalPropertyComponent {
-  firstName : string = 'Aman';
+  firstName : string = 'Prafull';
   lastName : string = 'Patil';
   fullName : string = this.firstName + ' ' +this.lastName;
 

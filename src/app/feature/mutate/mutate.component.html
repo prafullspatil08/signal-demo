@@ -8,7 +8,7 @@
     </tr>
   </thead>
   <tbody class="text-center">
-    <tr *ngFor="let employee of employees(); index as i">
+    <tr class="h-[50px]" *ngFor="let employee of employees(); index as i">
       <td>{{ i + 1 }}</td>
       <td>{{ employee.name }}</td>
       <td>{{ employee.position }}</td>
