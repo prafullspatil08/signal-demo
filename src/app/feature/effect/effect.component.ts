@@ -23,9 +23,9 @@ export class EffectComponent {
     });
   }
 
-  sideEffect = effect(() => this.saveProductDatatoAPI(this.product()));
+  sideEffect = effect(() => this.saveProductDataToAPI(this.product()));
 
-  saveProductDatatoAPI(product: any) {
+  saveProductDataToAPI(product: any) {
     console.log('Call Api with product Data: ', product);
   }
 }
