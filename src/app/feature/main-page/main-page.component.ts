@@ -21,7 +21,7 @@ export class MainPageComponent {
       path: 'update'
     },
     {
-      name: 'Cart',
+      name: 'Value Change',
       selected: false,
       path: 'cart'
     },

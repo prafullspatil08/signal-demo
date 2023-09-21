@@ -29,6 +29,7 @@ export class MutateComponent {
       empList.push(this.employeeForm.value);
     });
     this.employeeForm.reset();
+    this.toggleAddBlock();
   }
 
   toggleAddBlock(){
